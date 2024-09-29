@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-<h1>Salom Sizning id inigz {{ $id }}</h1>
+<h1>Salom </h1>
 
 </body>
 </html>
