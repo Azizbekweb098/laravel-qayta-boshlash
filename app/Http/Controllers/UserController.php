@@ -4,10 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class UserController extends Controller
+class UserCOntroller extends Controller
 {
-    public function index($id = null)
+    public function message()
     {
-       return 'Salom' . $id;
+      $users = ['Aziz', 'Jasur', 'Firdavs', 'Nurmahamad', 'Jullodin'];
+
+        return view('user', compact('users'));
     }
 }

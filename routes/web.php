@@ -1,26 +1,34 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
-
-Route::get('/', function() {
-  return view('welcome');
-});
+ use  App\Http\Controllers\SIteController;
+ use App\Http\Controllers\UserCOntroller;
 
 
-
-Route::get('/welcome/{id?}', [UserController::class, 'index'])->name('welcome');
-
-
-Route::prefix('admin')->group(function () {
-  Route::get('welcome', function() {
-    return view('home');
-  });
-});
+ Route::get("/", [UserCOntroller::class, 'message'])->name('message');
 
 
-Route::name('a.')->group( function() {
-  Route::get('aziz', function() {
-   return 'Salom';
-  })->name('aziz');
-});
+
+
+// Route::get('home', [SIteController::class, 'home'])->name('home');
+// Route::get('about', [SIteController::class, 'about'])->name('about');
+
+
+// Route::get("admin", [SIteController::class, 'admin'])->name('admin');
+
+ 
+//  Route::get('/', function () {
+//   return view('home');
+//  });
+
+ 
+
+// Route::prefix('admin')->name('site.')->group(function () {
+//     Route::get('/home', function(){
+//     return view('home');
+//     })->name('home');
+    
+//     Route::get('/about', function () {
+//         return view('about');
+//     })->name('about');
+// });
